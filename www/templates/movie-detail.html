@@ -1,0 +1,23 @@
+<ion-view view-title=" ">
+    <ion-content class="padding bg-content">
+
+        <img ng-src="http://image.tmdb.org/t/p/w500/{{movie.backdrop_path}}" width="100%">
+        <div class="padding" style="background-color: #424242">
+            <h3><center>{{movie.title}}</center></h3>
+            <h4>Release Date: {{movie.release_date}}</h4>
+            <p>
+                <Blockquote>
+                    {{ movie.overview }}
+                </Blockquote>
+            </p>
+            <div class="row">
+                <div class="col-20 col-center">
+                    <h4>Rating: </h4></div>
+                <div class="col-80">
+                    <ionic-ratings ratingsobj='ratingsObject' index='0'></ionic-ratings>
+                </div>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

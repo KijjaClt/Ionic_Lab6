@@ -1,0 +1,12 @@
+<ion-view title="Movies">
+    <ion-content class="bg-content" ng-init="loadMovies()">
+        <div class="row" ng-repeat="movie in movies" ng-if="$index % 2 === 0">
+            <div class="col col-50" ng-if="$index < movies.length" href="#/tab/movies/{{movies[$index].id}}">
+                <img ng-src="http://image.tmdb.org/t/p/w500/{{movies[$index].poster_path}}" width="100%" ng-click="openDetail({{movies[$index].id}})" />
+            </div>
+            <div class="col col-50" ng-if="$index + 1 < movies.length">
+                <img ng-src="http://image.tmdb.org/t/p/w500/{{movies[$index + 1].poster_path}}" width="100%" ng-click="openDetail({{movies[$index + 1].id}})" />
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

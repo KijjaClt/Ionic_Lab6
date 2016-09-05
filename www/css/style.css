@@ -1,0 +1,19 @@
+/* Empty. Add your own CSS if you like */
+
+.ionic_ratings .icon {
+    font-size: 40px;
+}
+
+.ionic_ratings .read_only {
+    pointer-events: none !important;
+}
+
+.bg-content {
+    background-color: #616161;
+}
+
+h3,
+h4,
+Blockquote {
+    color: white;
+}
