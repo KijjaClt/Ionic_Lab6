@@ -26,6 +26,68 @@
   </head>
 
   <body ng-app="starter">
+    <ion-nav-bar class="bar-light">
+        <ion-nav-back-button>
+        </ion-nav-back-button>
+    </ion-nav-bar>
     <ion-nav-view></ion-nav-view>
+
+    <script id="templates/intro.html" type="text/ng-template">
+      <ion-view view-title="Intro">
+        <ion-nav-buttons side="left">
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="startApp()" ng-show="!slideIndex">
+            Skip
+          </button>
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="previous()" ng-show="slideIndex > 0">
+            Prev
+          </button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="next()" ng-show="slideIndex != 4">
+            Next
+          </button>
+          <button class="button button-positive button-clear no-animation"
+                  ng-click="startApp()" ng-show="slideIndex == 4">
+            Start
+          </button>
+        </ion-nav-buttons>
+        <ion-slide-box on-slide-changed="slideChanged(index)">
+          <ion-slide>
+            <!-- <h1>1</h1> -->
+            <div id="logo">
+                <img src="img/img1.jpg" width="100%">
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <!-- <h1>2</h1> -->
+            <div id="logo">
+                <img src="img/img2.jpg" width="100%">
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <!-- <h1>3</h1> -->
+            <div id="logo">
+                <img src="img/img3.jpg" width="100%">
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <!-- <h1>3</h1> -->
+            <div id="logo">
+                <img src="img/img4.jpg" width="100%">
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <!-- <h1>3</h1> -->
+            <div id="logo">
+                <img src="img/img5.jpg" width="100%">
+            </div>
+          </ion-slide>
+        </ion-slide-box>
+      </ion-view>
+    </script>
+
   </body>
 </html>

@@ -64,7 +64,12 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','io
                 controller: 'MovieDetailController'
             }
         }
+    })
+    .state('intro', {
+    url: '/',
+    templateUrl: 'templates/intro.html',
+    controller: 'IntroCtrl'
     });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/about');
+  $urlRouterProvider.otherwise('/');
 });
