@@ -1,4 +1,9 @@
 <ion-view title="Reset Password">
+  <ion-nav-buttons side="right">
+    <div class="buttons">
+      <button class="button button-clear button-positive" ui-sref="app.about">Close</button>
+    </div>
+  </ion-nav-buttons>
   <ion-content class="has-header">
 
 	<form name="form_reset" ng-submit="doResetemail(userReset)" novalidate>
@@ -8,7 +13,7 @@
 		    <span class="input-label">Email</span>
 		    <input type="text" ng-model="$parent.userReset.rusername" id="ruser_name" placeholder="Username">
 		  </label>
-      
+
 		</div>
 		<div class="padding">
 			<button type="submit" class="button button-block button-calm">Reset</button>

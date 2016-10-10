@@ -1,9 +1,10 @@
-<ion-view title="Login">
-  <ion-nav-buttons side="right">
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
     <div class="buttons">
-      <button class="button button-clear button-positive" ui-sref="app.about">Close</button>
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
     </div>
-  </ion-nav-buttons>
+  </ion-header-bar>
   <ion-content>
     <form ng-submit="doLogin(userLogin)" name="form_login" novalidate>
       <div class="list">
@@ -19,16 +20,15 @@
           <button class="button button-block button-positive" type="submit">Log in</button>
         </label>
 
-        <center>{{loginData.loginErr}}</center>
       </div>
     </form>
 
     <label class="item">
-      <button class="button button-block button-positive" ui-sref="signup">Sign up</button>
+      <button class="button button-block button-positive" ng-click="closeLogin()" ui-sref="signup">Sign up</button>
     </label>
     <label class="item">
-      <button class="button button-block button-positive" ui-sref="reset">Forgot Password</button>
+      <button class="button button-block button-positive" ng-click="closeLogin()" ui-sref="reset">Forgot Password</button>
     </label>
 
   </ion-content>
-</ion-view>
+</ion-modal-view>

@@ -50,7 +50,8 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','io
     url: '/contact',
     views: {
       'menuContent': {
-        templateUrl: 'templates/contact-us.html'
+        templateUrl: 'templates/contact-us.html',
+        controller: 'dashboardController'
       }
     }
   })
@@ -72,11 +73,7 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','io
       }
     }
   })
-  .state('login', {
-    url: '/login',
-    templateUrl: 'templates/login.html',
-    controller: 'LoginController'
-  })
+
   .state('signup', {
     url: '/signup',
     templateUrl: 'templates/signup.html',
