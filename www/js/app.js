@@ -32,51 +32,66 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services','io
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
-    .state('app.about', {
-        url: '/about',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/about.html'
-            }
-        }
-    })
-    .state('app.contact', {
-        url: '/contact',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/contact-us.html'
-            }
-        }
-    })
-    .state('app.movies', {
-        url: '/movies',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/movies.html',
-                controller: 'MoviesController'
-            }
-        }
-    })
-    .state('app.movie-detail', {
-        url: '/movies/:id',
-        views: {
-            'menuContent': {
-                templateUrl: 'templates/movie-detail.html',
-                controller: 'MovieDetailController'
-            }
-        }
-    })
-    .state('intro', {
+  .state('app.about', {
+    url: '/about',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/about.html'
+      }
+    }
+  })
+  .state('app.contact', {
+    url: '/contact',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/contact-us.html'
+      }
+    }
+  })
+  .state('app.movies', {
+    url: '/movies',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/movies.html',
+        controller: 'MoviesController'
+      }
+    }
+  })
+  .state('app.movie-detail', {
+    url: '/movies/:id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/movie-detail.html',
+        controller: 'MovieDetailController'
+      }
+    }
+  })
+  .state('login', {
+    url: '/login',
+    templateUrl: 'templates/login.html',
+    controller: 'LoginController'
+  })
+  .state('signup', {
+    url: '/signup',
+    templateUrl: 'templates/signup.html',
+    controller: 'SignupController'
+  })
+  .state('reset', {
+    url: '/reset',
+    templateUrl: 'templates/resetemail.html',
+    controller: 'ResetController'
+  })
+  .state('intro', {
     url: '/',
     templateUrl: 'templates/intro.html',
     controller: 'IntroCtrl'
-    });
+  });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/');
 });
